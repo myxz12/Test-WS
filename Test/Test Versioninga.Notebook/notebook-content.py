@@ -21,6 +21,8 @@ Pravka 2
 
 Pravka s osnovnogo pk
 
+Dodam s osnovnogo PK ne okaya
+
 # METADATA ********************
 
 # META {
