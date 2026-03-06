@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "LoggingTime"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "68ed169c-0e38-ae6f-41c6-0eec9bfa275a"
+  }
+}

@@ -1,0 +1,10 @@
+relationship 3b5a24eb-af72-4702-91db-cf807b5858a6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ods tbWorklogDataset'.'Work Date'
+	toColumn: LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c.Date
+
+relationship 235528ba-4a24-4121-b986-ae22f9e622fc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ods tbWorklogDataset'.'Worklog create date'
+	toColumn: LocalDateTable_50a7a605-63ed-4006-bb8a-bf6a112d7ae5.Date
+

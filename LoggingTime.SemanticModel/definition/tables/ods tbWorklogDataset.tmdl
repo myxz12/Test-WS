@@ -1,0 +1,195 @@
+table 'ods tbWorklogDataset'
+	lineageTag: 6a711adc-401d-4d29-937c-fde08dc29130
+
+	column 'Issue Key'
+		dataType: string
+		lineageTag: 343fcc77-ae3c-4444-b140-4804a90d611f
+		summarizeBy: none
+		sourceColumn: Issue Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parent Key'
+		dataType: string
+		lineageTag: ffd4dce1-9f9d-4a55-a2c2-99c5017d0f8d
+		summarizeBy: none
+		sourceColumn: Parent Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Summary
+		dataType: string
+		lineageTag: 93dfa47a-23e8-41f5-b185-1de3849546a7
+		summarizeBy: none
+		sourceColumn: Summary
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reporter
+		dataType: string
+		lineageTag: 1a8eda60-30c0-4b98-bd68-8b94c516c79c
+		summarizeBy: none
+		sourceColumn: Reporter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issue Type'
+		dataType: string
+		lineageTag: 4c818927-5c1a-4003-bb4e-9b8b22e125aa
+		summarizeBy: none
+		sourceColumn: Issue Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resolution
+		dataType: string
+		lineageTag: d0b664be-2389-4e9f-b6a4-935fefe90df2
+		summarizeBy: none
+		sourceColumn: Resolution
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Author'
+		dataType: string
+		lineageTag: 3fe992b6-9b11-463b-81fb-404dba0f9cc7
+		summarizeBy: none
+		sourceColumn: Work Author
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Description'
+		dataType: string
+		lineageTag: 98dedb21-c8cd-4972-ac99-9ece186af328
+		summarizeBy: none
+		sourceColumn: Work Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8b207f01-893e-44d3-90dd-89c4521ea91e
+		summarizeBy: none
+		sourceColumn: Work Date
+
+		variation Variation
+			isDefault
+			relationship: 3b5a24eb-af72-4702-91db-cf807b5858a6
+			defaultHierarchy: LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Worklog create date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0621f336-2792-4694-8a8b-591082bb1844
+		summarizeBy: none
+		sourceColumn: Worklog create date
+
+		variation Variation
+			isDefault
+			relationship: 235528ba-4a24-4121-b986-ae22f9e622fc
+			defaultHierarchy: LocalDateTable_50a7a605-63ed-4006-bb8a-bf6a112d7ae5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Worktime Hours'
+		dataType: double
+		lineageTag: a99432c8-42d5-4b20-92b0-999c0b5fa412
+		summarizeBy: sum
+		sourceColumn: Worktime Hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Overtime
+		dataType: string
+		lineageTag: a0841450-67f9-47de-ab74-e8813992ab70
+		summarizeBy: none
+		sourceColumn: Overtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Key'
+		dataType: string
+		lineageTag: 83e4b96b-11b0-42ec-be3e-d8c60f80032c
+		summarizeBy: none
+		sourceColumn: Account Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Name'
+		dataType: string
+		lineageTag: b2fe67dd-cf59-485f-95eb-f7ae6524c199
+		summarizeBy: none
+		sourceColumn: Account Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Category'
+		dataType: string
+		lineageTag: c17a76d4-8f41-4e00-bbc1-fd04bb2411a8
+		summarizeBy: none
+		sourceColumn: Account Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Customer'
+		dataType: string
+		lineageTag: 0f76a54f-9821-4cc8-b1c8-5028b39a11ee
+		summarizeBy: none
+		sourceColumn: Account Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Components
+		dataType: string
+		lineageTag: 487324ac-70f9-4b69-a743-8c14a4661d5a
+		summarizeBy: none
+		sourceColumn: Components
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rate
+		dataType: double
+		lineageTag: 72e2fae3-b637-4225-82a4-61d77968b43a
+		summarizeBy: sum
+		sourceColumn: Rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AMOUNT
+		dataType: double
+		lineageTag: 73f99d7e-63f6-4999-a8a5-7ceb86719569
+		summarizeBy: sum
+		sourceColumn: AMOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ID
+		dataType: double
+		lineageTag: be2a6c95-8ac8-4878-b798-4b92c61662fd
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'ods tbWorklogDataset-26ca842d-feea-44cc-82a8-c9e09025417d' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("srv-sql-36.cloud.qmaro.com"),
+				    dbBilling = Source{[Name="dbBilling"]}[Data],
+				    ods_tbWorklogDataset = dbBilling{[Schema="ods",Item="tbWorklogDataset"]}[Data]
+				in
+				    ods_tbWorklogDataset
+
+	annotation PBI_ResultType = Table
+

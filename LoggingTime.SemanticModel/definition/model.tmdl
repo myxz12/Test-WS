@@ -1,0 +1,21 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["ods tbWorklogDataset"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.132.1053.0 (24.08)
+
+ref table 'ods tbWorklogDataset'
+ref table DateTableTemplate_422e10d2-73f4-4018-b85f-7f44f85c9c27
+ref table LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c
+ref table LocalDateTable_50a7a605-63ed-4006-bb8a-bf6a112d7ae5
+
+ref cultureInfo en-US
+

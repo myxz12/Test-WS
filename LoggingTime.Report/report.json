@@ -1,0 +1,63 @@
+{
+  "config": "{\"version\":\"5.40\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU11\",\"version\":\"5.42\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU11",
+            "path": "BaseThemes/CY22SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Working Time by User",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"02523762b620546b3734\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.753799392097266,\"y\":0,\"z\":0,\"width\":1271.246200607903,\"height\":719.7568389057751}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ods tbWorklogDataset.Work Author\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ods tbWorklogDataset.Worktime Hours)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ods tbWorklogDataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Work Author\"},\"Name\":\"ods tbWorklogDataset.Work Author\",\"NativeReferenceName\":\"Work Author\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Worktime Hours\"}},\"Function\":0},\"Name\":\"Sum(ods tbWorklogDataset.Worktime Hours)\",\"NativeReferenceName\":\"Sum of Worktime Hours\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Worktime Hours\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"35906156418e7fdd975c\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ods tbWorklogDataset\"}},\"Property\":\"Worktime Hours\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"3378fab156bd2a7c2f33\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ods tbWorklogDataset\"}},\"Property\":\"Work Author\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"85aaef30123fd17c9f1f\",\"expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ods tbWorklogDataset\"}},\"Name\":\"Variation\",\"Property\":\"Work Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2025L\"}}]]}}}]},\"type\":\"Categorical\",\"cachedDisplayNames\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2025L\"}}}}},\"displayName\":\"2025\"}],\"howCreated\":1,\"objects\":{},\"ordinal\":2},{\"name\":\"Filter1967021b7d0e082837d1\",\"expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ods tbWorklogDataset\"}},\"Name\":\"Variation\",\"Property\":\"Work Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Month\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'January'\"}}],[{\"Literal\":{\"Value\":\"'February'\"}}],[{\"Literal\":{\"Value\":\"'March'\"}}],[{\"Literal\":{\"Value\":\"'April'\"}}],[{\"Literal\":{\"Value\":\"'May'\"}}],[{\"Literal\":{\"Value\":\"'June'\"}}],[{\"Literal\":{\"Value\":\"'July'\"}}],[{\"Literal\":{\"Value\":\"'August'\"}}],[{\"Literal\":{\"Value\":\"'September'\"}}],[{\"Literal\":{\"Value\":\"'November'\"}}],[{\"Literal\":{\"Value\":\"'December'\"}}]]}}}}}]},\"type\":\"Categorical\",\"cachedDisplayNames\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'January'\"}}}}},\"displayName\":\"January\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'February'\"}}}}},\"displayName\":\"February\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'March'\"}}}}},\"displayName\":\"March\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'April'\"}}}}},\"displayName\":\"April\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'May'\"}}}}},\"displayName\":\"May\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'June'\"}}}}},\"displayName\":\"June\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'July'\"}}}}},\"displayName\":\"July\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'August'\"}}}}},\"displayName\":\"August\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'September'\"}}}}},\"displayName\":\"September\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'November'\"}}}}},\"displayName\":\"November\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_a41bc4b2-ae67-4278-a6ea-69695d393b2c\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'December'\"}}}}},\"displayName\":\"December\"}],\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"ordinal\":3}]",
+          "height": 719.76,
+          "width": 1271.25,
+          "x": 8.75,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Working time by Components",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionab88bbde3080bbb9439d",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0ed04e4542d40382b1aa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.72644376899696,\"y\":0,\"z\":0,\"width\":1270.273556231003,\"height\":719.7568389057751}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(ods tbWorklogDataset.Worktime Hours)\"}],\"Category\":[{\"queryRef\":\"ods tbWorklogDataset.Components\",\"active\":true},{\"queryRef\":\"ods tbWorklogDataset.Account Key\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ods tbWorklogDataset\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Worktime Hours\"}},\"Function\":0},\"Name\":\"Sum(ods tbWorklogDataset.Worktime Hours)\",\"NativeReferenceName\":\"Sum of Worktime Hours\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Components\"},\"Name\":\"ods tbWorklogDataset.Components\",\"NativeReferenceName\":\"Components\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Account Key\"},\"Name\":\"ods tbWorklogDataset.Account Key\",\"NativeReferenceName\":\"Account Key\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Components\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Account Key\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"maxMarginFactor\":{\"expr\":{\"Literal\":{\"Value\":\"25L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtere39dbeb974a701c7d595\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ods tbWorklogDataset\"}},\"Property\":\"Worktime Hours\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"isLockedInViewMode\":true},{\"name\":\"Filter9a48d82b164c3019a514\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ods tbWorklogDataset\"}},\"Property\":\"Work Author\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ods tbWorklogDataset\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Work Author\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'bokkar.s'\"}}],[{\"Literal\":{\"Value\":\"'bilyk.r'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"Filterf6edbaea91223439ba08\",\"expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ods tbWorklogDataset\"}},\"Name\":\"Variation\",\"Property\":\"Worklog create date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_50a7a605-63ed-4006-bb8a-bf6a112d7ae5\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Month\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'June'\"}}]]}}}]},\"type\":\"Categorical\",\"cachedDisplayNames\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_50a7a605-63ed-4006-bb8a-bf6a112d7ae5\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'June'\"}}}}},\"displayName\":\"June\"}],\"howCreated\":1,\"objects\":{}}]",
+          "height": 719.76,
+          "width": 1270.27,
+          "x": 9.73,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
